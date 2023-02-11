@@ -200,7 +200,7 @@ var data_digits = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
   "words": [										
 				{"id":"1",			"es": "¿Cuánto?" ,			"ru":"Сколько",		"speech":"Куанто"},
                 {"id":"2",			"es": "cero" ,				"ru":"ноль",		"speech":"с`эро"},
-                {"id":"",			"es": "uno" ,				"ru":"один",		"speech":"`уно"},
+                {"id":"3",			"es": "uno" ,				"ru":"один",		"speech":"`уно"},
                 {"id":"",			"es": "" ,					"ru":"",		"speech":""},
                 {"id":"",			"es": "" ,					"ru":"",		"speech":""},
                 {"id":"",			"es": "" ,					"ru":"",		"speech":""},
