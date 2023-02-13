@@ -236,7 +236,8 @@ function check_grammar() {
 			s=s.replace(/ú/gi,"u");
 			s=s.replace(/í/gi,"i");
 			s=s.replace(/é/gi,"e");
-			s=s.replace(/?|¿/gi,"");
+			s=s.replace("?","");
+			s=s.replace("¿","");
 			
 			s_idx=s.indexOf(' ');
 			if(s_idx==0) s=s.substr(1);
