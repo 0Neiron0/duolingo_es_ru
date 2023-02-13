@@ -283,7 +283,7 @@ var name_ru_questions = "Вопросы";
 var info_questions='';
 var data_questions = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
   "words": [										
-                {"id":"1",			"es": "Qué" ,				"ru":"что,юкакой",		"speech":"кеэ"},
+                {"id":"1",			"es": "Qué" ,				"ru":"что,какой",		"speech":"кеэ"},
                 {"id":"2",			"es": "Quién" ,				"ru":"кто",				"speech":"кэьен"},
                 {"id":"3",			"es": "Cómo" ,				"ru":"какой,как",		"speech":"комо"},
                 {"id":"4",			"es": "Cuáles" ,			"ru":"какие",			"speech":"куалэс"},
