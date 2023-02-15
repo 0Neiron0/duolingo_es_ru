@@ -314,7 +314,7 @@ var data_verbs = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
 				{"id":"1",			"es": "ver" ,				"ru":"видеть",		"speech":"вэр"},
 				{"id":"2",			"es": "correr" ,			"ru":"бегать",		"speech":"корэр"},
 				{"id":"3",			"es": "duermer" ,			"ru":"спать",		"speech":"дуэрмэр"},
-				{"id":"4",			"es": "nadar" ,				"ru":"плавать",		"speech":"надамэр"},
+				{"id":"4",			"es": "nadar" ,			"ru":"плавать",		"speech":"надамэр"},
 				{"id":"5",			"es": "caminar" ,			"ru":"ходить",		"speech":"каминэр"},
 				{"id":"6",			"es": "quierer" ,			"ru":"хотеть",		"speech":"кьерер"},
 				{"id":"7",			"es": "hacer" ,				"ru":"делать",		"speech":"асэр"},
@@ -383,12 +383,20 @@ var data_conjunctions = { //{"id":"",			"es": "",					"ru":"",		"speech":""},
 				{"id":"8",			"es": "sino",				"ru":"а,но,но и",				"speech":"сино"},
 				{"id":"9",			"es": "aunque",				"ru":"хотя",					"speech":"аукэ"},
 				{"id":"10",			"es": "mientras",			"ru":"в то время как,пока",		"speech":"миэнтрас"},
+				{"id":"11",			"es": "para",				"ru":"для",						"speech":"пара"},
+				{"id":"12",			"es": "en",					"ru":"в,на",						"speech":"эн"},
+				{"id":"13",			"es": "entre",				"ru":"между",					"speech":"энтре"},
 				{"id":"",			"es": "",					"ru":"",						"speech":""},
 				{"id":"",			"es": "",					"ru":"",						"speech":""},
-				
-
-				
-				
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+				{"id":"",			"es": "",					"ru":"",						"speech":""},
+	
 			]		
 };	
 
