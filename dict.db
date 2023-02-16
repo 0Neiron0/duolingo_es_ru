@@ -124,7 +124,9 @@ var data_items = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
 				{"id":"40",			"es": "la pared",			"ru":"стена",			"speech":"парэд"},
 				{"id":"41",			"es": "l techo",			"ru":"потолок,крыша",	"speech":"тэчо"},
 				{"id":"42",			"es": "el sótano",			"ru":"подвал",			"speech":"с`отано"},
-				{"id":"",			"es": "",					"ru":"",			"speech":""},
+				{"id":"43",			"es": "el piso",			"ru":"пол",				"speech":"писо"},
+				{"id":"44",			"es": "el cepillo",			"ru":"щетка",			"speech":"сэпильо"},
+				{"id":"45",			"es": "la secadora",		"ru":"сушилка",			"speech":"секадора"},
 				{"id":"",			"es": "",					"ru":"",			"speech":""},
 				
 				
