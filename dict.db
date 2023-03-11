@@ -397,7 +397,7 @@ var data_questions = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
 //¿ á ó ú ñ í é --------------------------------------------------------------------------------------------------------------------------------------------------				
 var name_verbs = "verbs";
 var name_ru_verbs = "Глаголы";
-var info_verbs='<a href="https://amigosdelespanol.wordpress.com/2020/08/11/presente-de-indicativo-de-los-verbos-regulares/" target="_blank">Инфа</a> </br> <img src="img/verbs.jpg" alt=""> ';
+var info_verbs='<a href="https://amigosdelespanol.wordpress.com/2020/08/11/presente-de-indicativo-de-los-verbos-regulares/" target="_blank">Инфа</a> </br> <img src="img/verbs.jpg" alt=""> </br> <img src="img/verbs2.png" alt=""> ';
 var data_verbs = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
   "words": [										
 				{"id":"1",			"es": "ver" ,				"ru":"видеть",		"speech":"вэр"},
@@ -439,6 +439,20 @@ var data_verbs = { //{"id":"",			"es": "" ,					"ru":"",		"speech":""},
 				{"id":"38",			"es": "sueño",				"ru":"мечтать",			"speech":"суэньо"},
 				{"id":"39",			"es": "volver",				"ru":"возвращаться",	"speech":"больвор"},
 				{"id":"40",			"es": "pensar",				"ru":"думать",			"speech":"пенсар"},
+				{"id":"42",			"es": "abrir",				"ru":"открывать",		"speech":"абрир"},
+				{"id":"43",			"es": "contar",				"ru":"считать",			"speech":"конт`ар"},
+				{"id":"44",			"es": "respetar",			"ru":"уважать",			"speech":"респет`ар"},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
+				{"id":"",			"es": "",			"ru":"",			"speech":""},
 				{"id":"",			"es": "",			"ru":"",			"speech":""},
 				{"id":"",			"es": "",			"ru":"",			"speech":""},
 				
@@ -614,7 +628,7 @@ var data_adjectives = { //{"id":"",			"es": "",					"ru":"",		"speech":""},
 				{"id":"21",			"es": "feo",					"ru":"некрасивый",					"speech":"фэо"},
 				{"id":"22",			"es": "largo",					"ru":"длинный",						"speech":"ларго"},
 				{"id":"23",			"es": "alt",					"ru":"высокий",						"speech":"альт"},
-				{"id":"",			"es": "",						"ru":"",							"speech":""},
+				{"id":"24",			"es": "capaz",					"ru":"способный",					"speech":"кап`аз"},
 				{"id":"",			"es": "",						"ru":"",							"speech":""},
 				{"id":"",			"es": "",						"ru":"",							"speech":""},
 				{"id":"",			"es": "",						"ru":"",							"speech":""},
