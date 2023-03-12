@@ -13,7 +13,7 @@
 !-->
 <div class="">
  <h1>This is a Heading</h1>
- <p><a href="make.php">Regenerate</a>    <a href="conn.php?act=del">Clear table</a> <a href="conn.php">Show table</a> <a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></p>
+ <p><a href="index.php">Home</a>    <a href="conn.php?act=del">Clear table</a> <a href="conn.php">Show table</a> <a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></p>
 <?php
 
 
@@ -31,7 +31,13 @@ function ins_word($p_es,$p_ru,$p_id=null){
 	if (!$res) {echo "sql INSERT query error:".$sql; $mysqli->close();  exit(0);}
 }
 
-
+function del_word($p_es,$p_ru){
+	global $mysqli;
+	$sql="delete from words where es_name='".$p_es."' and ru_name='".$p_ru."'";;
+	$res = $mysqli->query($sql);
+	if (!$res) {echo "sql DELETE query error:".$sql; $mysqli->close();  exit(0);}
+	return $sql;
+}
 
 
 
@@ -58,6 +64,13 @@ if (isset ( $_GET["act"] ) ) {
 		$es=htmlspecialchars($_GET["es"]);
 		$ru=htmlspecialchars($_GET["ru"]);	
 		ins_word($es,$ru);
+	}	
+	
+	if ($act == 'del') {
+		$es=htmlspecialchars($_GET["es"]);
+		$ru=htmlspecialchars($_GET["ru"]);	
+		echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>".del_word($es,$ru);
+		
 	}	
 }
 echo "start</br>";
