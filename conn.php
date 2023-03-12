@@ -13,33 +13,65 @@
 !-->
 <div class="">
  <h1>This is a Heading</h1>
- <p><a href="make.php">Regenerate</a></p>
+ <p><a href="make.php">Regenerate</a>    <a href="conn.php?act=del">Clear table</a> <a href="conn.php">Show table</a> <a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></p>
 <?php
 
-function ins_word($p_id,$p_es,$p_ru){
+
+
+function clr_tbl(){
 	global $mysqli;
-	$sql="insert into words values(".$p_id.",".$p_es.",".$p_ru.");";
-	$res = $mysqli->query($sql,MYSQLI_USE_RESULT);
-	if (!$res) {echo "sql INSERT query error"; $mysqli->close();  exit(0);}
-	
+	$res = $mysqli->query("delete from words;",MYSQLI_USE_RESULT);
 }
 
-$host="localhost";
-$dbuser="root";
-$dbpass="";
-$db="epiz_33567965_es";
+function ins_word($p_es,$p_ru,$p_id=null){
+	global $mysqli;
+	if ($p_id) $sql="insert into words values(".$p_id.",'".$p_es."','".$p_ru."');";
+	else $sql="insert into words values(null,'".$p_es."','".$p_ru."');";
+	$res = $mysqli->query($sql,MYSQLI_USE_RESULT);
+	if (!$res) {echo "sql INSERT query error:".$sql; $mysqli->close();  exit(0);}
+}
 
+
+
+
+
+
+
+
+
+
+
+
+include 'd.php';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$mysqli = new mysqli($host,$dbuser,$dbpass,$db);
+$mysqli->set_charset("utf8");
+$act="";
+
+if (isset ( $_GET["act"] ) ) {
+	$act=htmlspecialchars($_GET["act"]);
+	echo '<p>you want to ' . $act . '!</p>';
+
+	if ($act == 'del') clr_tbl();
+	
+	if ($act == 'ins') {
+		$es=htmlspecialchars($_GET["es"]);
+		$ru=htmlspecialchars($_GET["ru"]);	
+		ins_word($es,$ru);
+	}	
+}
 echo "start</br>";
 
-global $mysqli = new mysqli($host,$dbuser,$dbpass,$db) or die ("mysql error!");
-$mysqli->set_charset("utf8");
-//ins_word(2,"e","r");
+
+
+
 $res = $mysqli->query("select * from words",MYSQLI_USE_RESULT);
 if (!$res) {echo "sql query error"; $mysqli->close();  exit(0);}
 While($row = $res->fetch_assoc()) {	
 	print_r($row);
 
 }
+
 $mysqli->close();
 echo "end</br>";
 
@@ -51,3 +83,12 @@ echo "end</br>";
 
 </body>
 </html> 
+
+<?php
+
+$mysqli = new mysqli($host,$dbuser,$dbpass,$db);
+$mysqli->set_charset("utf8");
+
+
+
+?>
