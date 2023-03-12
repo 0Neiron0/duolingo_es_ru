@@ -548,107 +548,7 @@ function print_table_soy() {
        }
 	pr("</table>");		
 }
-//---------------------------------------Words--------------------------------------   
-function print_table_words() {
-	pr('<div class="div_hide">        <h1>Скрыть колонку:</h1> 		<a class="hide-vis" data-column="0">Id</a>		<a class="hide-vis" data-column="1">Род</a> - 		<a class="hide-vis" data-column="2">Испанский</a> - <a class="hide-vis" data-column="3">Ввести по-русски</a> - <a class="hide-vis" data-column="4">Русский</a> - <a class="hide-vis" data-column="5">Ввести по-испански</a> - ');		
-	pr('<label for="grp">Выбрать группу</label><select name="grp_words" id="grp_words"><option value="0">Все</option><option value="1">Еда</option><option value="2">Животные</option><option value="3">Глаголы</option></select> </div>');
-	// {"id":"",	"grp":"",	"gender": "" ,		"es":"",		"ru":""},
-	// id - индекс, номер по нарастающей		
-	//grp - группа: 1- еда, 2 -животные, глаголы -3, 
-	//gender - род, la - женский, el - мужской, пусто - нету(глагол или другая форма речи)
-	//es - слово по-испански
-	//ru - слово по-русски
-  results = { 
-  "words": [
-			{"gender": "la" ,	"es":"nina",			"ru":"девочка"},
-			{"gender": "el" ,	"es":"nino",			"ru":"мальчик"},
-			{"gender": "el" ,	"es":"hombre",			"ru":"мужчина"},
-			{"gender": "la" ,	"es":"mujer",			"ru":"женщина"},
-			{"gender": "la" ,	"es":"leche",			"ru":"молоко"},
-			{"gender": "" 	,	"es":"lo siento",		"ru":"сожалею"},
-			{"gender": "" 	,	"es":"come",			"ru":"есть"},
-			{"id":"",	"grp":"3",	"gender": "" ,		"es":"cocino",		"ru":"готовить"},
-			{"gender": "la" ,	"es":"sal",				"ru":"соль"},
-			{"gender": "la" ,	"es":"naranja",			"ru":"апельсин"},
-			{"gender": "el" ,	"es":"queso",			"ru":"сыр"},
-			{"gender": "la" ,	"es":"papa",			"ru":"картофель"},
-			{"gender": "la" ,	"es":"cebolla",			"ru":"лук"},
-			{"gender": "la" ,	"es":"cena",			"ru":"ужин"},
-			{"gender": "el" ,	"es":"desayuno",		"ru":"завтрак"},
-			{"gender": "el" ,	"es":"emparedado",		"ru":"бутерброд"},
-			{"gender": "el" ,	"es":"te",				"ru":"чай"},
-			{"gender": "el" ,	"es":"pollo",			"ru":"курица/цыпленок"},
-			{"id":"",	"grp":"1",	"gender": "el" ,	"es":"azúcar",		"ru":"сахар"},
-			{"id":"",	"grp":"1",	"gender": "el" ,	"es":"almuerzo",	"ru":"обед"},
-			{"id":"",	"grp":"1",	"gender": "el" ,	"es":"libro",	"ru":"книга"},
-			{"id":"",	"grp":"1",	"gender": "la" ,	"es":"carta",	"ru":"письмо"},
-			{"gender": "la" ,	"es":"cerveza","ru":"пиво"},
-			{"gender": "el" ,	"es":"huevo","ru":"яйцо"},
-			{"gender": "el" ,	"es":"arroz","ru":"рис"},
-			{"gender": "el" ,	"es":"pescado","ru":"рыба"},
-			{"id":"",	"grp":"1",	"gender": "el" ,	"es":"jugo",		"ru":"сок"},
-			{"gender": "la" ,	"es":"fruta","ru":"фрукты"},
-			{"gender": "la" ,	"es":"comida","ru":"еда"},
-			{"gender": "la" ,	"es":"papaya","ru":"папайа"},
-			{"gender": "el" ,	"es":"caballo","ru":"лошадь"},
-			{"gender": "el" ,	"es":"cangrejo",	"ru":"краб"},
-			{"gender": "el" ,	"es":"león",		"ru":"лев"},
-			{"gender": "el" ,	"es":"gato",		"ru":"кот"},
-			{"id":"28",	"grp":"2",	"gender": "el" ,	"es":"toro",			"ru":"бык"},
-			{"id":"29",	"grp":"2",	"gender": "el" ,	"es":"oso",				"ru":"медведь"},
-			{"id":"30",	"grp":"2",	"gender": "el" ,	"es":"elefante",		"ru":"слон"},
-			{"id":"31",	"grp":"2",	"gender": "el" ,	"es":"pato",			"ru":"утка"},
-			{"id":"32",	"grp":"2",	"gender": "el" ,	"es":"perro",			"ru":"собака"},
-			{"id":"33",	"grp":"2",	"gender": "el" ,	"es":"ratón",			"ru":"мышь"},
-			{"id":"34",	"grp":"2",	"gender": "el" ,	"es":"cerdo",			"ru":"свинья"},
-			{"id":"34",	"grp":"2",	"gender": "la" ,	"es":"araña",			"ru":"паук"},
-			
-			
-	       ] 
-	};    
-  //results = JSON.parse(results);{"id":"",	"grp":"",	"gender": "" ,	"es":"",		"ru":""},
-//---------------------------------------------------------------------Table Words----------------------------------- 
-  pr('<table id="words" class="display" style="width:50%">');
-  pr('        <thead>'+
-            '<tr>'+
-				'<th>Id</th>'+
-                '<th>Род</th>'+
-                '<th>Испанский</th>'+
-                '<th>Ввести по-русски</th>'+
-                '<th>Русский</th>'+
-				'<th>Ввести по-испански</th>'+
-            '</tr>'+
-        '</thead>');
-  for($i in results.words){
-        //console.log(results[$i].ru);				
-		id=results.words[$i].id;
-		grp=results.words[$i].grp;
-		//console.log("grp="+grp);
-		//if(grp=="1") {
-			
-			g=results.words[$i].gender;
-			es=results.words[$i].es;
-			ru=results.words[$i].ru;
-			es_c='<input autocomplete="off" type = "text" value="" style="color: #FF0000; font-size:16px" id="'+g+' '+es+'" oninput="check_grammar()" >';
-			ru_c='<input autocomplete="off" type = "text" value="" style="color: #FF0000;" id="'+ru+'" oninput="check_grammar()" >';
-			
-			pr('<tr>');
-			pr(
-				'<td>'+id+"</td>"
-				+'<td>'+g+"</td>"
-				+'<td>'+es+"</td>"
-				+"<td>"+ru_c+"</td>"
-				+"<td>"+ru+"</td>"
-				+"<td>"+es_c+"</td>"
-				
-			);
-			pr("</tr>");
-		//}	
-			
-      }
-	pr("</table>");
-}	
-//---------------------------------------------------------------------END Table Words-----------------------------------	
+
 </script>
 
 
@@ -697,10 +597,8 @@ print_table_tut("p_colors",data_colors,name_colors,name_ru_colors,info_colors);
 print_table_tut("p_conjunctions",data_conjunctions,name_conjunctions,name_ru_conjunctions,info_conjunctions);	
 print_table_tut("p_adjectives",data_adjectives,name_adjectives,name_ru_adjectives,info_adjectives);	
 print_table_tut("p_ordinal_numerals",data_ordinal_numerals,name_ordinal_numerals,name_ru_ordinal_numerals,info_ordinal_numerals);	
-//print_table_tut("",,,,info_ordinal_numerals);	
+print_table_tut("p_useful_phrases",data_useful_phrases,name_useful_phrases,name_ru_useful_phrases,info_useful_phrases);	
 
-
-print_table_words();
 </script>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
