@@ -12,8 +12,8 @@
 <!--<img src="img_la.jpg" alt="LA" style="width:100%">
 !-->
 <div class="">
- <h1>This is a Heading</h1>
- <p><a href="index.php">Home</a>    <a href="conn.php?act=del">Clear table</a> <a href="conn.php">Show table</a> <a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></p>
+ <h1>Table for train</h1>
+ <p><a href="index.php">Home</a>    <a href="conn.php?act=clr">Clear table</a> <a href="conn.php">Show table</a> <a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></p>
 <?php
 
 
@@ -56,9 +56,9 @@ $act="";
 
 if (isset ( $_GET["act"] ) ) {
 	$act=htmlspecialchars($_GET["act"]);
-	echo '<p>you want to ' . $act . '!</p>';
+	//echo '<p>you want to ' . $act . '!</p>';
 
-	if ($act == 'del') clr_tbl();
+	if ($act == 'clr') clr_tbl();
 	
 	if ($act == 'ins') {
 		$es=htmlspecialchars($_GET["es"]);
