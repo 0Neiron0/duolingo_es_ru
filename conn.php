@@ -31,6 +31,54 @@ li a {
 li a:hover {
   background-color: green;
 }
+
+
+
+
+
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
 </style>
 
 
@@ -96,6 +144,24 @@ function check_grammar() {
          }   
 		 
 //---------------------------------------END check_grammar--------------------------------------
+//---------------------------------------httpGet--------------------------------------         
+ function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+function rem_word(p_id) {
+	//alert(p_id);
+	//const a = par.split(";");
+	url = 'conn.php?act=del_es&es='+p_id;
+	//alert(url);
+	r=httpGet(url);
+	//alert(r);
+	location.reload();
+}	
 </script>
 
 
@@ -138,10 +204,16 @@ function del_word($p_es,$p_ru){
 	$sql="delete from words where es_name='".$p_es."' and ru_name='".$p_ru."'";;
 	$res = $mysqli->query($sql);
 	if (!$res) {echo "sql DELETE query error:".$sql; $mysqli->close();  exit(0);}
-	return $sql;
+	//return $sql;
 }
 
-
+function del_word_es($p_es){
+	global $mysqli;
+	$sql="delete from words where es_name='".$p_es."'";
+	$res = $mysqli->query($sql);
+	if (!$res) {echo "sql DELETE ES query error:".$sql; $mysqli->close();  exit(0);}
+	//return $sql;
+}
 
 
 
@@ -171,7 +243,14 @@ if (isset ( $_GET["act"] ) ) {
 	if ($act == 'del') {
 		$es=htmlspecialchars($_GET["es"]);
 		$ru=htmlspecialchars($_GET["ru"]);	
-		echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>".del_word($es,$ru);
+		del_word($es,$ru);
+		//echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+		
+	}	
+	if ($act == 'del_es') {
+		$es=htmlspecialchars($_GET["es"]);
+		del_word_es($es);
+		//echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
 		
 	}	
 }
@@ -192,7 +271,7 @@ While($row = $res->fetch_assoc()) {
 	echo "<tr>";
 	echo '<td style="color: grey; font-size:16px">'.$est."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>".
 	'<td style="font-size:18px">'.$row["ru_name"]."</td>"
-	."<td>".$est_c."</td>"
+	."<td>".$est_c.'<button class="button-8" id="'.$est.'" role="button"  onclick="rem_word(this.id)" >remove</button>'."</td>"
 	;
 	echo "</tr>";
 	
