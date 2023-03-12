@@ -220,7 +220,15 @@ function pr(p_str){
 	document.write(p_str);
 	//console.log(p_str);
    }
-   
+//---------------------------------------add_word--------------------------------------      
+function add_word(par) {
+	//alert($(this).val());
+	alert(par);
+	//var val = $(this).val(); 
+    //console.log("got:"+par);
+	//console.log( par.text() );
+	//console.log(par.target.value);
+}      
 //---------------------------------------check_grammar--------------------------------------      
 function check_grammar() {
            //á ó ú ñ
@@ -392,7 +400,7 @@ pr('<div id="'+p_id+'" class="div_tut" style="display: none">');
 				+'<td>'+es+"</td>"
 				+'<td>'+ru_c+"</td>"
 				+'<td>'+ru+"</td>"
-				+"<td>"+es_c+"</td>"
+				+"<td nowrap>"+es_c+'<input type="checkbox" id="'+es+';'+ru+'"  onclick="add_word(this.id)"></td>'
 				+"<td>"+speech+"</td>"
 				
 			);
