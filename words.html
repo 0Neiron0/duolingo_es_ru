@@ -117,7 +117,7 @@
 		cursor: pointer;
 	}		
 	h1.n { 
-		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 130px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; 
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 80px; font-weight: normal; line-height: 100px; margin: 0 0 0px; text-align: center; text-shadow: 1px 1px 2px #082b34; 
 	}
 	h1.n:hover{
 		background: rgb(250,0,0);
@@ -149,6 +149,35 @@
 #myBtn:hover {
   background-color: #555;
 }	
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+  font-size: 30px;
+}
+
+li a {
+  background-color:  rgba(0,212,255,1);
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: blue;
+  color:white;
+}
 </style>	
 </head>
 
@@ -558,9 +587,15 @@ function print_table_soy() {
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 !-->
 <body>
-<p><a href="make.php">Regenerate</a></p>
-<p><a href="conn.php">Connection</a></p>
-<h1 class="n"> Neiron&copy;  </h1>
+
+ <h1 class="n"> Neiron&copy;  </h1>
+
+ <ul>
+  <li><a href="make.php">Regenerate</a></li>
+  <li><a href="conn.php">Show table</a></li>
+</ul>
+
+
 
 <script>
 
