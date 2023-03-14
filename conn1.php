@@ -173,7 +173,7 @@ function rem_word(p_id) {
   <li><a href="index.php">Home</a></li>
   <li><a href="conn.php">Show orig table</a></li>
   <li><a href="conn1.php">Show clone table</a></li>
-  <li><a href="conn.php?act=clr">Clear table</a></li>
+  <li><a href="conn1.php?act=clr">Clear clone table</a></li>
   <li><a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></li>
 </ul> 
 
