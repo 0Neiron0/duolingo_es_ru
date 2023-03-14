@@ -156,7 +156,7 @@ function check_grammar() {
 function rem_word(p_id) {
 	//alert(p_id);
 	//const a = par.split(";");
-	url = 'conn.php?act=del_es&es='+p_id;
+	url = 'conn1.php?act=del_es&es='+p_id;
 	//alert(url);
 	r=httpGet(url);
 	//alert(r);
@@ -171,11 +171,10 @@ function rem_word(p_id) {
 <body>
  <ul>
   <li><a href="index.php">Home</a></li>
-  <li><a href="conn.php">Show table</a></li>
+  <li><a href="conn.php">Show orig table</a></li>
+  <li><a href="conn1.php">Show clone table</a></li>
   <li><a href="conn.php?act=clr">Clear table</a></li>
   <li><a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></li>
-  <li><a href="conn1.php">Show clone table</a></li>
-   <li><a href="conn.php?act=clone">Clone table</a></li>
 </ul> 
 
 
@@ -186,7 +185,7 @@ function rem_word(p_id) {
 !-->
 <?php
 
-$word_table="words";
+$word_table="words_c";
 
 function clr_tbl(){
 	global $mysqli,$word_table;
@@ -272,7 +271,7 @@ if (isset ( $_GET["act"] ) ) {
 
 
 
-$res = $mysqli->query("select * from words",MYSQLI_USE_RESULT);
+$res = $mysqli->query("select * from ".$word_table,MYSQLI_USE_RESULT);
 if (!$res) {echo "sql query error"; $mysqli->close();  exit(0);}
 
 echo "<table>";
