@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<title>Page Title</title>
+<title>Words for learn</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
 
@@ -172,7 +172,7 @@ function rem_word(p_id) {
  <ul>
   <li><a href="index.php">Home</a></li>
   <li><a href="conn.php">Show table</a></li>
-  <li><a href="conn.php?act=clr">Clear tabl</a></li>
+  <li><a href="conn.php?act=clr">Clear table</a></li>
   <li><a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></li>
 </ul> 
 
@@ -184,32 +184,32 @@ function rem_word(p_id) {
 !-->
 <?php
 
-
+$word_table="words";
 
 function clr_tbl(){
-	global $mysqli;
-	$res = $mysqli->query("delete from words;",MYSQLI_USE_RESULT);
+	global $mysqli,$word_table;
+	$res = $mysqli->query("delete from ".$word_table.";",MYSQLI_USE_RESULT);
 }
 
 function ins_word($p_es,$p_ru,$p_id=null){
-	global $mysqli;
-	if ($p_id) $sql="insert into words values(".$p_id.",'".$p_es."','".$p_ru."');";
-	else $sql="insert into words values(null,'".$p_es."','".$p_ru."');";
+	global $mysqli,$word_table;
+	if ($p_id) $sql="insert into ".$word_table." values(".$p_id.",'".$p_es."','".$p_ru."');";
+	else $sql="insert into ".$word_table." values(null,'".$p_es."','".$p_ru."');";
 	$res = $mysqli->query($sql,MYSQLI_USE_RESULT);
 	if (!$res) {echo "sql INSERT query error:".$sql; $mysqli->close();  exit(0);}
 }
 
 function del_word($p_es,$p_ru){
-	global $mysqli;
-	$sql="delete from words where es_name='".$p_es."' and ru_name='".$p_ru."'";;
+	global $mysqli,$word_table;
+	$sql="delete from ".$word_table." where es_name='".$p_es."' and ru_name='".$p_ru."'";;
 	$res = $mysqli->query($sql);
 	if (!$res) {echo "sql DELETE query error:".$sql; $mysqli->close();  exit(0);}
 	//return $sql;
 }
 
 function del_word_es($p_es){
-	global $mysqli;
-	$sql="delete from words where es_name='".$p_es."'";
+	global $mysqli,$word_table;
+	$sql="delete from ".$word_table." where es_name='".$p_es."'";
 	$res = $mysqli->query($sql);
 	if (!$res) {echo "sql DELETE ES query error:".$sql; $mysqli->close();  exit(0);}
 	//return $sql;
