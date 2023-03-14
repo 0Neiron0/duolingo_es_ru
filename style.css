@@ -1,0 +1,152 @@
+
+	input {
+		font-family: "Times New Roman", Times, serif;
+		font-size: 16px;
+		font-weight: bold;
+		 
+	}
+	div.div_hide {
+		font-family: "Times New Roman", Times, serif;
+		font-size: 16px;
+		font-weight: bold;
+
+		text-align: center;
+	}
+	div.div_tut {
+		font-family: "Times New Roman", Times, serif;
+		font-size: 16px;
+		font-weight: bold;
+		text-align: center;
+		display: block;
+	}
+	a.hide-vis{
+		color: blue;
+	}
+	a.hide-vis:hover{
+		background-color: yellow;
+		color: black;
+		cursor: pointer;
+	}
+	
+	a.hide_t6{
+		color: blue;
+	}
+	a.hide_t6:hover{
+		background-color: yellow;
+		color: black;
+		cursor: pointer;
+	}	
+	
+	a.hide_tut{
+		color: blue;
+	}
+	a.hide_tut:hover{
+		background-color: yellow;
+		color: black;
+		cursor: pointer;
+	}		
+	h1.n { 
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: #CEF0D4; font-family: 'Rouge Script', cursive; font-size: 80px; font-weight: normal; line-height: 100px; margin: 0 0 0px; text-align: center; text-shadow: 1px 1px 2px #082b34; 
+	}
+	h1.n:hover{
+		background: rgb(250,0,0);
+		background: linear-gradient(90deg, rgba(250,0,0,1) 0%, rgba(249,255,0,1) 49%, rgba(255,0,0,1) 100%); 
+	}	
+	
+	h1.h_tut_table{
+		color:grey;
+	}
+	h1.h_tut_table:hover{
+		cursor: pointer;
+		background-color: yellow;
+	}
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}	
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+  font-size: 30px;
+}
+
+li a {
+  background-color:  rgba(0,212,255,1);
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: blue;
+  color:white;
+}
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}

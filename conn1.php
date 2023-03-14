@@ -5,81 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
 
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
-}
-
-li {
-  float: left;
-  font-size: 30px;
-}
-
-li a {
-	background-color: grey;
-  display: block;
-  color: blue;
-  text-align: center;
-  padding: 20px 30px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: green;
-}
-
-
-
-
-
-
-/* CSS */
-.button-8 {
-  background-color: #e1ecf4;
-  border-radius: 3px;
-  border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #39739d;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-}
-
-.button-8:hover,
-.button-8:focus {
-  background-color: #b3d3ea;
-  color: #2c5777;
-}
-
-.button-8:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.button-8:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #2c5777;
-}
-</style>
+	<!-- ? my styles ? -->
+	 <link rel="stylesheet" href="style.css" />
 
 
 <style>
@@ -169,12 +96,14 @@ function rem_word(p_id) {
 
 
 <body>
+ <h1 class="n"> Neiron&copy;  </h1>
+
  <ul>
   <li><a href="index.php">Home</a></li>
   <li><a href="conn.php">Show orig table</a></li>
   <li><a href="conn1.php">Show clone table</a></li>
-  <li><a href="conn1.php?act=clr">Clear clone table</a></li>
-  <li><a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></li>
+  <li><a href="conn1.php?act=ins&es=ES&ru=RU">Ins table</a></li>
+  <li><a href="conn1.php?act=clr">!!!Clear clone table</a></li>
 </ul> 
 
 
