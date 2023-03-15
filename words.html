@@ -71,6 +71,10 @@
     ></script>
 	<!-- ? my styles ? -->
 	 <link rel="stylesheet" href="style.css" />
+	     <!-- ? my fucctions ? -->
+    <script type="text/javascript"
+      src="js_funcs.js"
+    ></script>
 
 
 
@@ -95,6 +99,7 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+	mybutton = document.getElementById("myBtn");
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
@@ -102,11 +107,7 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+
 //-------------------------------------------------------Speak-------------------------------------------
 if ('speechSynthesis' in window) {
  // Speech Synthesis supported 🎉
@@ -522,12 +523,13 @@ print_table_tut("p_verbs",data_verbs,name_verbs,name_ru_verbs,info_verbs);
 print_table_tut("p_colors",data_colors,name_colors,name_ru_colors,info_colors);	
 print_table_tut("p_conjunctions",data_conjunctions,name_conjunctions,name_ru_conjunctions,info_conjunctions);	
 print_table_tut("p_adjectives",data_adjectives,name_adjectives,name_ru_adjectives,info_adjectives);	
+print_table_tut("p_adverbs",data_adverbs,name_adverbs,name_ru_adverbs,info_adverbs);	
 print_table_tut("p_ordinal_numerals",data_ordinal_numerals,name_ordinal_numerals,name_ru_ordinal_numerals,info_ordinal_numerals);	
 print_table_tut("p_useful_phrases",data_useful_phrases,name_useful_phrases,name_ru_useful_phrases,info_useful_phrases);	
 
 </script>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display:none">Top</button>
 <div id="rr"></div>
 </body>
 </html>

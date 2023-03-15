@@ -34,6 +34,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+	
+	<!-- ? my fucctions ? -->
+    <script type="text/javascript"
+      src="js_funcs.js"
+    ></script>
+	
 <script>
 let DEBUG=true;
 //---------------------------------------check_grammar--------------------------------------      
@@ -71,14 +77,7 @@ function check_grammar() {
          }   
 		 
 //---------------------------------------END check_grammar--------------------------------------
-//---------------------------------------httpGet--------------------------------------         
- function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
+
 
 function rem_word(p_id) {
 	//alert(p_id);
@@ -103,10 +102,10 @@ function rem_word(p_id) {
   <li><a href="conn.php">Show orig table</a></li>
   <li><a href="conn1.php">Show clone table</a></li>
   <li><a href="conn1.php?act=ins&es=ES&ru=RU">Ins table</a></li>
-  <li><a href="conn1.php?act=clr">!!!Clear clone table</a></li>
+  <li><a style="background-color:red; color:#ffff03;" href="conn1.php?act=clr">Clear clone table</a></li>
 </ul> 
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display:none">Top</button>
 <!--<img src="img_la.jpg" alt="LA" style="width:100%">
 !-->
 <div class="">
