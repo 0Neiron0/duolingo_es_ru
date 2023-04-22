@@ -105,8 +105,8 @@ function rem_word(p_id) {
   <li><a href="conn.php">Show table</a></li>
   <li><a href="conn.php?act=ins&es=ES&ru=RU">Ins table</a></li>
   <li><a href="conn1.php">Show clone table</a></li>
-  <li><a style="background-color: red; color:#ffff03;" href="conn.php?act=clr">Clear table</a></li>
-   <li><a href="conn.php?act=clone">Clone table</a></li>
+  <li><a id ="cloneLink" href="conn.php?act=clone">Clone table</a></li>
+  <li><a id="clearTableLink" style="background-color: red; color:#ffff03;" href="conn.php?act=clr">Clear table</a></li>
 </ul> 
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="display:none">Top</button>
@@ -118,6 +118,7 @@ function rem_word(p_id) {
 <?php
 
 $word_table="words";
+session_start(); 
 
 function clr_tbl(){
 	global $mysqli,$word_table;
@@ -231,5 +232,26 @@ $mysqli->close();
  
 </div>
 
+
+
+
+<script>
+  const cloneLink = document.getElementById('cloneLink');
+  const clearTableLink = document.getElementById('clearTableLink');
+
+  cloneLink.addEventListener('click', (event) => {
+    const confirmed = confirm('Are you sure you want to clone table?');
+    if (!confirmed) {
+      event.preventDefault();
+    }
+  });
+
+  clearTableLink.addEventListener('click', (event) => {
+    const confirmed = confirm('Are you sure you want to clear table?');
+    if (!confirmed) {
+      event.preventDefault();
+    }
+  });
+</script>
 </body>
 </html> 
